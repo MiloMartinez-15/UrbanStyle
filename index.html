@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Style — Nueva Colección</title>
+
+  <!-- Fuente Google Fonts (Syne y Inter para un look urbano y moderno) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos externa -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER & NAVEGACIÓN -->
+  <header>
+    <div class="logo">Urban<span>Style</span></div>
+    <ul class="nav-links">
+      <li><a href="#hero">Inicio</a></li>
+      <li><a href="#catalog">Colección</a></li>
+      <li><a href="#promo">Destacados</a></li>
+    </ul>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle">
+        🌙 <span id="themeLabel">Modo Oscuro</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <span class="badge">Drop 01 // 2026</span>
+      <h1 class="hero-title">Redefine Tu Estilo Urbano</h1>
+      <p class="hero-subtitle">Descubre la nueva colección oversized inspirada en la cultura del streetwear internacional. Comodidad, actitud y diseño exclusivo.</p>
+      <a href="#catalog" class="btn">Ver Colección</a>
+    </div>
+    <div class="hero-image-wrapper">
+      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" alt="Moda Urbana Hero" class="hero-img">
+    </div>
+  </section>
+
+  <!-- CATÁLOGO DE PRODUCTOS -->
+  <section class="catalog" id="catalog">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Nuevos Ingresos</h2>
+        <p style="color: var(--text-muted)">Haz click en cualquier prenda para ver detalles</p>
+      </div>
+    </div>
+
+    <div class="grid" id="productGrid">
+      <!-- Los productos se cargan dinámicamente desde JavaScript -->
+    </div>
+  </section>
+
+  <!-- MODAL DE DETALLE DE PRODUCTO -->
+  <div class="modal" id="productModal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeModal">&times;</span>
+      <img src="" alt="" class="modal-img" id="modalImg">
+      <div class="modal-details">
+        <span class="badge" id="modalCategory">Categoría</span>
+        <h2 id="modalTitle" style="font-family: var(--font-heading); margin: 0.5rem 0;">Nombre del Producto</h2>
+        <p id="modalPrice" style="font-size: 1.5rem; font-weight: 800; color: var(--accent-color);">$0.00</p>
+        <p id="modalDesc" style="color: var(--text-muted); margin-top: 1rem; line-height: 1.5;">Descripción corta del producto.</p>
+        
+        <div style="margin-top: 1.5rem;">
+          <label style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase;">Selecciona tu talla:</label>
+          <div class="size-selector">
+            <button class="size-btn">S</button>
+            <button class="size-btn active">M</button>
+            <button class="size-btn">L</button>
+            <button class="size-btn">XL</button>
+          </div>
+        </div>
+
+        <button class="btn" style="width: 100%; margin-top: 1rem;">Comprar Ahora</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script JS externo -->
+  <script src="script.js"></script>
+</body>
+</html>
